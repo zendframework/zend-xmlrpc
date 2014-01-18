@@ -48,7 +48,7 @@ class DomDocument extends AbstractGenerator
     }
 
     /**
-     * Close a previously opened XML element
+     * Close an previously opened XML element
      *
      * Resets $currentElement to the next parent node in the hierarchy
      *
