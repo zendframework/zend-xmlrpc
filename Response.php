@@ -9,8 +9,6 @@
 
 namespace Zend\XmlRpc;
 
-use ZendXml\Security as XmlSecurity;
-
 /**
  * XmlRpc Response
  *
@@ -153,9 +151,28 @@ class Response
             return false;
         }
 
+        // @see ZF-12293 - disable external entities for security purposes
+        $loadEntities         = libxml_disable_entity_loader(true);
+        $useInternalXmlErrors = libxml_use_internal_errors(true);
         try {
-            $xml = XmlSecurity::scan($response);
-        } catch (\ZendXml\Exception\RuntimeException $e) {
+            $dom = new \DOMDocument;
+            $dom->loadXML($response);
+            foreach ($dom->childNodes as $child) {
+                if ($child->nodeType === XML_DOCUMENT_TYPE_NODE) {
+                    throw new Exception\ValueException(
+                        'Invalid XML: Detected use of illegal DOCTYPE'
+                    );
+                }
+            }
+            // TODO: Locate why this passes tests but a simplexml import doesn't
+            //$xml = simplexml_import_dom($dom);
+            $xml = new \SimpleXMLElement($response);
+            libxml_disable_entity_loader($loadEntities);
+            libxml_use_internal_errors($useInternalXmlErrors);
+        } catch (\Exception $e) {
+            libxml_disable_entity_loader($loadEntities);
+            libxml_use_internal_errors($useInternalXmlErrors);
+            // Not valid XML
             $this->fault = new Fault(651);
             $this->fault->setEncoding($this->getEncoding());
             return false;
