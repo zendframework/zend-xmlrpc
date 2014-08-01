@@ -18,8 +18,7 @@
         "zendframework/zend-http": "self.version",
         "zendframework/zend-math": "self.version",
         "zendframework/zend-server": "self.version",
-        "zendframework/zend-stdlib": "self.version",
-        "zendframework/zendxml": "1.*"
+        "zendframework/zend-stdlib": "self.version"
     },
     "extra": {
         "branch-alias": {
