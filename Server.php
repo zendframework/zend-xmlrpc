@@ -435,6 +435,7 @@ class Server extends AbstractServer
     {
         if (!class_exists($class) || !static::isSubclassOf($class, 'Zend\XmlRpc\Response')) {
             throw new Server\Exception\InvalidArgumentException('Invalid response class');
+
         }
         $this->responseClass = $class;
         return true;
