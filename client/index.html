@@ -204,7 +204,6 @@ var_dump($client-&gt;call('test.guess'));
 
 // ['You guessed', 42]</code></pre>
 
-
 <p>The XML-RPC value returned from the remote method call will be automatically
 unmarshaled and cast to the equivalent PHP native type. In the example above, a
 PHP array is returned containing a string and an integer value; you can
@@ -222,7 +221,6 @@ $arg2 = 7;
 $result = $client-&gt;call('test.sumProd', [$arg1, $arg2]);
 
 // $result is a native PHP type</code></pre>
-
 
 <p>If the remote method doesn't require parameters, this optional parameter may
 either be left out or an empty <code>[]</code> passed to it. The array of parameters for
@@ -311,7 +309,6 @@ in an additional call to the remote server.</p>
 method prior to making your XML-RPC call:</p>
 <pre class="codehilite"><code class="language-php">$client-setSkipSystemLookup(true);
 $result = $client-call('foo.bar', array(array()));</code></pre>
-
 
 </blockquote>
 <h3 id="zend92xmlrpc92value-objects-as-parameters">Zend\XmlRpc\Value Objects as Parameters</h3>
@@ -428,7 +425,6 @@ parameters may be passed like any other PHP method.</p>
 $service  = $client-&gt;getProxy();           // Proxy the default namespace
 $products = $service-&gt;test-&gt;sumProd(5, 7); // test.sumProd(5, 7) returns [12, 35]</code></pre>
 
-
 <p>The <code>getProxy()</code> method receives an optional argument specifying which namespace of the remote
 server to proxy. If it does not receive a namespace, the default namespace will be proxied. In the
 next example, the 'test' namespace will be proxied:</p>
@@ -437,7 +433,6 @@ next example, the 'test' namespace will be proxied:</p>
 
 $test  = $client-&gt;getProxy('test'); // Proxy the &quot;test&quot; namespace
 $hello = $test-&gt;sumProd(5, 7);      // test.sumProd(5, 7) returns [12, 35]</code></pre>
-
 
 <p>If the remote server supports nested namespaces of any depth, these can also be
 used through the server proxy. For example, if the server in the example above
@@ -458,7 +453,6 @@ try {
     // $e-&gt;getCode() returns 404
     // $e-&gt;getMessage() returns &quot;Not Found&quot;
 }</code></pre>
-
 
 <p>Regardless of how the XML-RPC client is used, the <code>Zend\XmlRpc\Client\Exception\HttpException</code>
 will be thrown whenever an HTTP error occurs.</p>
@@ -481,7 +475,6 @@ try {
     // $e-&gt;getMessage() returns &quot;Unknown method&quot;
 }</code></pre>
 
-
 <p>When the <code>call()</code> method is used to make the request, the
 <code>Zend\XmlRpc\Client\Exception\FaultException</code> will be thrown on fault. A
 <code>Zend\XmlRpc\Response</code> object containing the fault will also be available by
@@ -502,7 +495,6 @@ $introspector = $client-&gt;getIntrospector();
 foreach ($introspector-&gt;listMethods() as $method) {
     echo &quot;Method: &quot; . $method . &quot;\n&quot;;
 }</code></pre>
-
 
 <p>The following methods are available for introspection:</p>
 <ul>
@@ -532,7 +524,6 @@ $client-&gt;doRequest($request);
 
 // $client-&gt;getLastRequest() returns instanceof Zend\XmlRpc\Request
 // $client-&gt;getLastResponse() returns instanceof Zend\XmlRpc\Response</code></pre>
-
 
 <p>Whenever an XML-RPC method call is made by the client through any means &mdash;
 either the <code>call()</code> method, <code>doRequest()</code> method, or server proxy &mdash; the
