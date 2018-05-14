@@ -2,12 +2,12 @@
     "docs": [
         {
             "location": "/",
-            "text": "zend-xmlrpc\n\n\n\n\n\n\nFrom its home page, XML-RPC is described as a \u201d...remote procedure calling using\nHTTP as the transport and XML as the encoding. XML-RPC is designed to be as\nsimple as possible, while allowing complex data structures to be transmitted,\nprocessed and returned.\u201d\n\n\nZend\\XmlRpc\n provides support for both consuming remote XML-RPC services and\nbuilding new XML-RPC servers.\n\n\n\n\nFile issues at https://github.com/zendframework/zend-xmlrpc/issues\n\n\nDocumentation is at https://zendframework.github.io/zend-xmlrpc/",
-            "title": "Home"
+            "text": "zend-xmlrpc\n\n\n\n\n\n\nFrom its home page, XML-RPC is described as a \u201d...remote procedure calling using\nHTTP as the transport and XML as the encoding. XML-RPC is designed to be as\nsimple as possible, while allowing complex data structures to be transmitted,\nprocessed and returned.\u201d\n\n\nZend\\XmlRpc\n provides support for both consuming remote XML-RPC services and\nbuilding new XML-RPC servers.\n\n\n\n\nFile issues at https://github.com/zendframework/zend-xmlrpc/issues\n\n\nDocumentation is at https://docs.zendframework.com/zend-xmlrpc/",
+            "title": "zend-xmlrpc"
         },
         {
             "location": "/#zend-xmlrpc",
-            "text": "From its home page, XML-RPC is described as a \u201d...remote procedure calling using\nHTTP as the transport and XML as the encoding. XML-RPC is designed to be as\nsimple as possible, while allowing complex data structures to be transmitted,\nprocessed and returned.\u201d  Zend\\XmlRpc  provides support for both consuming remote XML-RPC services and\nbuilding new XML-RPC servers.   File issues at https://github.com/zendframework/zend-xmlrpc/issues  Documentation is at https://zendframework.github.io/zend-xmlrpc/",
+            "text": "From its home page, XML-RPC is described as a \u201d...remote procedure calling using\nHTTP as the transport and XML as the encoding. XML-RPC is designed to be as\nsimple as possible, while allowing complex data structures to be transmitted,\nprocessed and returned.\u201d  Zend\\XmlRpc  provides support for both consuming remote XML-RPC services and\nbuilding new XML-RPC servers.   File issues at https://github.com/zendframework/zend-xmlrpc/issues  Documentation is at https://docs.zendframework.com/zend-xmlrpc/",
             "title": "zend-xmlrpc"
         },
         {
