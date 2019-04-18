@@ -11,7 +11,8 @@
 
     <title>Intro - zend-xmlrpc</title>
 
-    <link rel="stylesheet" href="../css/styles-e3f3751b65.css">
+    <link rel="stylesheet" href="../css/styles-18b942728f.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -63,50 +64,52 @@
             
             
                 <div class="nav navbar-nav navbar-collapse visible-xs-block ">
-                    <div class="subnavigation hidden-print">
-    <h4 class="subnavigation__title">
-        <a href="..">zend-xmlrpc</a>
-    </h4>
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="">zend-xmlrpc</a>
+        </h4>
 
-    <h5 class="subnavigation__subtitle">Table of Contents</h5>
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
 
-    <ul class="subnavigation__list">
-        
+        <ul class="subnavigation__list">
             
-                <li class="subnavigation__list-item ">
-                    <a href=".." class="subnavigation__link">zend-xmlrpc</a>
-                </li>
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="" class="subnavigation__link">zend-xmlrpc</a>
+                    </li>
+                
             
-        
+                
+                    <li class="subnavigation__list-item subnavigation__list-item--active">
+                        <a href="intro/" class="subnavigation__link">Intro</a>
+                    </li>
+                
             
-                <li class="subnavigation__list-item subnavigation__list-item--active">
-                    <a href="./" class="subnavigation__link">Intro</a>
-                </li>
-            
-        
-            
-                <li class="subnavigation__list-item">
-                    <span class="subnavigation__headline">Reference</span>
-                    <ul class="subnavigation__list">
-                        
+                
+                    <li class="subnavigation__list-item">
+                        <span class="subnavigation__headline">Reference</span>
+                        <ul class="subnavigation__list">
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../client/" class="subnavigation__link">XML-RPC Clients</a>
+        <a href="client/" class="subnavigation__link">XML-RPC Clients</a>
     </li>
 
-                        
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../server/" class="subnavigation__link">XML-RPC Servers</a>
+        <a href="server/" class="subnavigation__link">XML-RPC Servers</a>
     </li>
 
-                        
-                    </ul>
-                </li>
+                            
+                        </ul>
+                    </li>
+                
             
-        
-    </ul>
-</div>
+        </ul>
+    </div>
+
                 </div>
             
 
@@ -157,19 +160,36 @@
 </header>
 
     
+    <div class="laminas-announcement">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                Zend Framework transitions to the Linux Foundation. <a href="https://getlaminas.org">Learn More.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-xs-12 content" role="main">
             <!-- content:begin -->
                 
                     <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
-  <li><a href="https://framework.zend.com/">Home</a></li>
-  <li><a href="https://docs.zendframework.com/">Docs</a></li>
-  <li><a href="..">zend-xmlrpc</a></li>
-  
+    <li><a href="https://framework.zend.com/">Home</a></li>
+
     
-  
-  <li class="active">Intro</li>
+        <li><a href="https://docs.zendframework.com/">Documentation</a></li>
+
+        
+            <li><a href="">zend-xmlrpc</a></li>
+
+            
+
+            <li class="active">Intro</li>
+        
+    
 </ol>
 
 
@@ -212,13 +232,13 @@ providing XML-RPC servers.</p>
     */
     public function sayHello($name = 'Stranger')
     {
-        return sprintf(&quot;Hello %s!&quot;, $name);
+        return sprintf("Hello %s!", $name);
     }
 }
 
 $server = new Zend\XmlRpc\Server;
 
-// Our Greeter class will be called &quot;greeter&quot; from the client:
+// Our Greeter class will be called "greeter" from the client:
 $server-&gt;setClass('Greeter', 'greeter');
 $server-&gt;handle();</code></pre>
 
@@ -234,10 +254,10 @@ signatures to clients.</p>
 <pre class="codehilite"><code class="language-php">$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
 
 echo $client-&gt;call('greeter.sayHello');
-// will output &quot;Hello Stranger!&quot;
+// will output "Hello Stranger!"
 
 echo $client-&gt;call('greeter.sayHello', ['Dude']);
-// will output &quot;Hello Dude!&quot;</code></pre>
+// will output "Hello Dude!"</code></pre>
 
 
 
@@ -247,7 +267,7 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
         
         <li class="page-nav__item">
             
-                <a rel="prev" class="page-nav__link page-nav__link--prev" href="..">
+                <a rel="prev" class="page-nav__link page-nav__link--prev" href="">
                     <i class="fa fa-chevron-left"></i> Previous
                 </a>
             
@@ -256,7 +276,7 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
         
         <li class="page-nav__item">
             
-                <a rel="next" class="page-nav__link page-nav__link--next" href="../client/">
+                <a rel="next" class="page-nav__link page-nav__link--next" href="client/">
                     Next <i class="fa fa-chevron-right"></i>
                 </a>
             
@@ -265,14 +285,16 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
 </nav>
 
 
-<div class="help-wanted">
-    <p>
-        Found a mistake or want to contribute to the documentation?
-        <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/book/intro.md" target="_blank" class="help-wanted__link">
-            Edit this page on GitHub!
-        </a>
-    </p>
-</div>
+
+    <div class="help-wanted">
+        <p>
+            Found a mistake or want to contribute to the documentation?
+            <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/book/intro.md" target="_blank" class="help-wanted__link">
+                Edit this page on GitHub!
+            </a>
+        </p>
+    </div>
+
                 
             <!-- content:end -->
             </div>
@@ -286,50 +308,52 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
         <optgroup label="Components"></optgroup>
     </select>
 </div>
-                    <div class="subnavigation hidden-print">
-    <h4 class="subnavigation__title">
-        <a href="..">zend-xmlrpc</a>
-    </h4>
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="">zend-xmlrpc</a>
+        </h4>
 
-    <h5 class="subnavigation__subtitle">Table of Contents</h5>
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
 
-    <ul class="subnavigation__list">
-        
+        <ul class="subnavigation__list">
             
-                <li class="subnavigation__list-item ">
-                    <a href=".." class="subnavigation__link">zend-xmlrpc</a>
-                </li>
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="" class="subnavigation__link">zend-xmlrpc</a>
+                    </li>
+                
             
-        
+                
+                    <li class="subnavigation__list-item subnavigation__list-item--active">
+                        <a href="intro/" class="subnavigation__link">Intro</a>
+                    </li>
+                
             
-                <li class="subnavigation__list-item subnavigation__list-item--active">
-                    <a href="./" class="subnavigation__link">Intro</a>
-                </li>
-            
-        
-            
-                <li class="subnavigation__list-item">
-                    <span class="subnavigation__headline">Reference</span>
-                    <ul class="subnavigation__list">
-                        
+                
+                    <li class="subnavigation__list-item">
+                        <span class="subnavigation__headline">Reference</span>
+                        <ul class="subnavigation__list">
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../client/" class="subnavigation__link">XML-RPC Clients</a>
+        <a href="client/" class="subnavigation__link">XML-RPC Clients</a>
     </li>
 
-                        
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../server/" class="subnavigation__link">XML-RPC Servers</a>
+        <a href="server/" class="subnavigation__link">XML-RPC Servers</a>
     </li>
 
-                        
-                    </ul>
-                </li>
+                            
+                        </ul>
+                    </li>
+                
             
-        
-    </ul>
-</div>
+        </ul>
+    </div>
+
                 
             </div>
         </div>
@@ -382,6 +406,15 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
                     <li class="support__list-item">
                         <a href="https://twitter.com/zfdevteam" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
                     </li>
+                    <li class="support__list-item">
+                        <a href="https://tinyletter.com/mwopzend" class="support__link" title="Newsletter"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://framework.zend.com/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://framework.zend.com/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -392,9 +425,8 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
         var base_url = '..',
             siteName = 'zend-xmlrpc';
     </script>
-    <script src="../js/scripts-dcbafde59f.js"></script>
-        <script src="../search/require.js"></script>
-        <script src="../search/search.js"></script>
+    <script src="../js/scripts-edc4cfa790.js"></script>
+        <script src="../search/main.js"></script>
 
     
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
@@ -423,6 +455,14 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
             </div>
         </div>
     </div>
+
+<script>
+// Anchors
+anchors.options.placement = 'left';
+anchors.add(
+    '.content h1:not(.content__title), .content h2, .content > h3, .content h4, .content h5'
+);
+</script>
 
 
 

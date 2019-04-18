@@ -11,7 +11,8 @@
 
     <title>XML-RPC Clients - zend-xmlrpc</title>
 
-    <link rel="stylesheet" href="../css/styles-e3f3751b65.css">
+    <link rel="stylesheet" href="../css/styles-18b942728f.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
 </head>
 <body id="page-top">
 
@@ -63,50 +64,52 @@
             
             
                 <div class="nav navbar-nav navbar-collapse visible-xs-block ">
-                    <div class="subnavigation hidden-print">
-    <h4 class="subnavigation__title">
-        <a href="..">zend-xmlrpc</a>
-    </h4>
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="">zend-xmlrpc</a>
+        </h4>
 
-    <h5 class="subnavigation__subtitle">Table of Contents</h5>
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
 
-    <ul class="subnavigation__list">
-        
+        <ul class="subnavigation__list">
             
-                <li class="subnavigation__list-item ">
-                    <a href=".." class="subnavigation__link">zend-xmlrpc</a>
-                </li>
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="" class="subnavigation__link">zend-xmlrpc</a>
+                    </li>
+                
             
-        
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="intro/" class="subnavigation__link">Intro</a>
+                    </li>
+                
             
-                <li class="subnavigation__list-item ">
-                    <a href="../intro/" class="subnavigation__link">Intro</a>
-                </li>
-            
-        
-            
-                <li class="subnavigation__list-item">
-                    <span class="subnavigation__headline">Reference</span>
-                    <ul class="subnavigation__list">
-                        
+                
+                    <li class="subnavigation__list-item">
+                        <span class="subnavigation__headline">Reference</span>
+                        <ul class="subnavigation__list">
                             
+                                
     <li class="subnavigation__list-item subnavigation__list-item--active">
-        <a href="./" class="subnavigation__link">XML-RPC Clients</a>
+        <a href="client/" class="subnavigation__link">XML-RPC Clients</a>
     </li>
 
-                        
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../server/" class="subnavigation__link">XML-RPC Servers</a>
+        <a href="server/" class="subnavigation__link">XML-RPC Servers</a>
     </li>
 
-                        
-                    </ul>
-                </li>
+                            
+                        </ul>
+                    </li>
+                
             
-        
-    </ul>
-</div>
+        </ul>
+    </div>
+
                 </div>
             
 
@@ -157,23 +160,40 @@
 </header>
 
     
+    <div class="laminas-announcement">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                Zend Framework transitions to the Linux Foundation. <a href="https://getlaminas.org">Learn More.</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
     <div class="container">
         <div class="row">
             <div class="col-md-9 col-xs-12 content" role="main">
             <!-- content:begin -->
                 
                     <ol class="breadcrumb" role="navigation" aria-label="breadcrumbs navigation">
-  <li><a href="https://framework.zend.com/">Home</a></li>
-  <li><a href="https://docs.zendframework.com/">Docs</a></li>
-  <li><a href="..">zend-xmlrpc</a></li>
-  
+    <li><a href="https://framework.zend.com/">Home</a></li>
+
     
-      
-        <li>Reference</li>
-      
+        <li><a href="https://docs.zendframework.com/">Documentation</a></li>
+
+        
+            <li><a href="">zend-xmlrpc</a></li>
+
+            
+                
+                    <li>Reference</li>
+                
+            
+
+            <li class="active">XML-RPC Clients</li>
+        
     
-  
-  <li class="active">XML-RPC Clients</li>
 </ol>
 
 
@@ -469,7 +489,7 @@ next example, the 'test' namespace will be proxied:</p>
 <h3 id="proxy-any-namespace">Proxy Any Namespace</h3>
 <pre class="codehilite"><code class="language-php">$client = new Zend\XmlRpc\Client('http://www.advogato.org/XMLRPC');
 
-$test  = $client-&gt;getProxy('test'); // Proxy the &quot;test&quot; namespace
+$test  = $client-&gt;getProxy('test'); // Proxy the "test" namespace
 $hello = $test-&gt;sumProd(5, 7);      // test.sumProd(5, 7) returns [12, 35]</code></pre>
 
 <p>If the remote server supports nested namespaces of any depth, these can also be
@@ -489,7 +509,7 @@ try {
     $client-&gt;call('bar', array($arg1, $arg2));
 } catch (Zend\XmlRpc\Client\Exception\HttpException $e) {
     // $e-&gt;getCode() returns 404
-    // $e-&gt;getMessage() returns &quot;Not Found&quot;
+    // $e-&gt;getMessage() returns "Not Found"
 }</code></pre>
 
 <p>Regardless of how the XML-RPC client is used, the <code>Zend\XmlRpc\Client\Exception\HttpException</code>
@@ -510,7 +530,7 @@ try {
     $client-&gt;call('badMethod');
 } catch (Zend\XmlRpc\Client\Exception\FaultException $e) {
     // $e-&gt;getCode() returns 1
-    // $e-&gt;getMessage() returns &quot;Unknown method&quot;
+    // $e-&gt;getMessage() returns "Unknown method"
 }</code></pre>
 
 <p>When the <code>call()</code> method is used to make the request, the
@@ -531,7 +551,7 @@ perform introspection operations on the server.</p>
 <pre class="codehilite"><code class="language-php">$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
 $introspector = $client-&gt;getIntrospector();
 foreach ($introspector-&gt;listMethods() as $method) {
-    echo &quot;Method: &quot; . $method . &quot;\n&quot;;
+    echo "Method: " . $method . "\n";
 }</code></pre>
 
 <p>The following methods are available for introspection:</p>
@@ -588,7 +608,7 @@ this.</p>
         
         <li class="page-nav__item">
             
-                <a rel="prev" class="page-nav__link page-nav__link--prev" href="../intro/">
+                <a rel="prev" class="page-nav__link page-nav__link--prev" href="intro/">
                     <i class="fa fa-chevron-left"></i> Previous
                 </a>
             
@@ -597,7 +617,7 @@ this.</p>
         
         <li class="page-nav__item">
             
-                <a rel="next" class="page-nav__link page-nav__link--next" href="../server/">
+                <a rel="next" class="page-nav__link page-nav__link--next" href="server/">
                     Next <i class="fa fa-chevron-right"></i>
                 </a>
             
@@ -606,14 +626,16 @@ this.</p>
 </nav>
 
 
-<div class="help-wanted">
-    <p>
-        Found a mistake or want to contribute to the documentation?
-        <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/book/client.md" target="_blank" class="help-wanted__link">
-            Edit this page on GitHub!
-        </a>
-    </p>
-</div>
+
+    <div class="help-wanted">
+        <p>
+            Found a mistake or want to contribute to the documentation?
+            <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/book/client.md" target="_blank" class="help-wanted__link">
+                Edit this page on GitHub!
+            </a>
+        </p>
+    </div>
+
                 
             <!-- content:end -->
             </div>
@@ -627,50 +649,52 @@ this.</p>
         <optgroup label="Components"></optgroup>
     </select>
 </div>
-                    <div class="subnavigation hidden-print">
-    <h4 class="subnavigation__title">
-        <a href="..">zend-xmlrpc</a>
-    </h4>
+                    
+    <div class="subnavigation hidden-print">
+        <h4 class="subnavigation__title">
+            <a href="">zend-xmlrpc</a>
+        </h4>
 
-    <h5 class="subnavigation__subtitle">Table of Contents</h5>
+        <h5 class="subnavigation__subtitle">Table of Contents</h5>
 
-    <ul class="subnavigation__list">
-        
+        <ul class="subnavigation__list">
             
-                <li class="subnavigation__list-item ">
-                    <a href=".." class="subnavigation__link">zend-xmlrpc</a>
-                </li>
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="" class="subnavigation__link">zend-xmlrpc</a>
+                    </li>
+                
             
-        
+                
+                    <li class="subnavigation__list-item ">
+                        <a href="intro/" class="subnavigation__link">Intro</a>
+                    </li>
+                
             
-                <li class="subnavigation__list-item ">
-                    <a href="../intro/" class="subnavigation__link">Intro</a>
-                </li>
-            
-        
-            
-                <li class="subnavigation__list-item">
-                    <span class="subnavigation__headline">Reference</span>
-                    <ul class="subnavigation__list">
-                        
+                
+                    <li class="subnavigation__list-item">
+                        <span class="subnavigation__headline">Reference</span>
+                        <ul class="subnavigation__list">
                             
+                                
     <li class="subnavigation__list-item subnavigation__list-item--active">
-        <a href="./" class="subnavigation__link">XML-RPC Clients</a>
+        <a href="client/" class="subnavigation__link">XML-RPC Clients</a>
     </li>
 
-                        
                             
+                                
     <li class="subnavigation__list-item ">
-        <a href="../server/" class="subnavigation__link">XML-RPC Servers</a>
+        <a href="server/" class="subnavigation__link">XML-RPC Servers</a>
     </li>
 
-                        
-                    </ul>
-                </li>
+                            
+                        </ul>
+                    </li>
+                
             
-        
-    </ul>
-</div>
+        </ul>
+    </div>
+
                 
             </div>
         </div>
@@ -723,6 +747,15 @@ this.</p>
                     <li class="support__list-item">
                         <a href="https://twitter.com/zfdevteam" class="support__link" title="Twitter"><i class="fa fa-twitter"></i></a>
                     </li>
+                    <li class="support__list-item">
+                        <a href="https://tinyletter.com/mwopzend" class="support__link" title="Newsletter"><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://framework.zend.com/blog/feed-rss.xml" class="support__link" title="Blog feed"><i class="fa fa-rss"></i></a>
+                    </li>
+                    <li class="support__list-item">
+                        <a href="https://framework.zend.com/security/feed" class="support__link" title="Security feed"><i class="fa fa-rss-square"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -733,9 +766,8 @@ this.</p>
         var base_url = '..',
             siteName = 'zend-xmlrpc';
     </script>
-    <script src="../js/scripts-dcbafde59f.js"></script>
-        <script src="../search/require.js"></script>
-        <script src="../search/search.js"></script>
+    <script src="../js/scripts-edc4cfa790.js"></script>
+        <script src="../search/main.js"></script>
 
     
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
@@ -764,6 +796,14 @@ this.</p>
             </div>
         </div>
     </div>
+
+<script>
+// Anchors
+anchors.options.placement = 'left';
+anchors.add(
+    '.content h1:not(.content__title), .content h2, .content > h3, .content h4, .content h5'
+);
+</script>
 
 
 
