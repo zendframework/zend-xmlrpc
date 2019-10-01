@@ -257,7 +257,7 @@ complex data structures to be transmitted, processed and returned."</p>
 providing XML-RPC servers.</p>
 <h2 id="quick-start">Quick Start</h2>
 <p>The following demonstrates the most basic use case for <code>Zend\XmlRpc\Server</code>:</p>
-<pre class="codehilite"><code class="language-php">class Greeter
+<p> <pre class=codehilite><code class=language-php>class Greeter
 {
     /**
     * Say hello to someone.
@@ -267,18 +267,17 @@ providing XML-RPC servers.</p>
     */
     public function sayHello($name = 'Stranger')
     {
-        return sprintf("Hello %s!", $name);
+        return sprintf(&quot;Hello %s!&quot;, $name);
     }
 }
 
 $server = new Zend\XmlRpc\Server;
 
-// Our Greeter class will be called "greeter" from the client:
+// Our Greeter class will be called &quot;greeter&quot; from the client:
 $server-&gt;setClass('Greeter', 'greeter');
-$server-&gt;handle();</code></pre>
-
+$server-&gt;handle();</code></pre></p>
 <blockquote>
-<h3 id="docblock-annotations-are-required">Docblock annotations are required</h3>
+<h3>Docblock annotations are required</h3>
 <p>Function and method docblocks containing parameter and return value
 annotations <strong>are required</strong> when exposing them via <code>Zend\XmlRpc\Server</code>. The
 values will be used to validate method parameters and provide method
@@ -286,13 +285,13 @@ signatures to clients.</p>
 <p>Docblock descriptions will also be used to provide method help text.</p>
 </blockquote>
 <p>The following demonstrates an XML-RPC client that can consume the above service:</p>
-<pre class="codehilite"><code class="language-php">$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
+<p> <pre class=codehilite><code class=language-php>$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
 
 echo $client-&gt;call('greeter.sayHello');
-// will output "Hello Stranger!"
+// will output &quot;Hello Stranger!&quot;
 
 echo $client-&gt;call('greeter.sayHello', ['Dude']);
-// will output "Hello Dude!"</code></pre>
+// will output &quot;Hello Dude!&quot;</code></pre></p>
 
 
 
@@ -326,7 +325,7 @@ echo $client-&gt;call('greeter.sayHello', ['Dude']);
     <div class="help-wanted">
         <p>
             Found a mistake or want to contribute to the documentation?
-            <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/intro.md" target="_blank" class="help-wanted__link">
+            <a href="https://github.com/zendframework/zend-xmlrpc/edit/master/docs/book/intro.md" target="_blank" class="help-wanted__link">
                 Edit this page on GitHub!
             </a>
         </p>
