@@ -389,9 +389,10 @@ type. Additionally, this means that any call with array arguments will result
 in an additional call to the remote server.</p>
 <p>To disable the lookup entirely, you can call the <code>setSkipSystemLookup()</code>
 method prior to making your XML-RPC call:</p>
-<p><code>php
+<p><pre class=codehilite><code class=language-php>
 $client-setSkipSystemLookup(true);
-$result = $client-call('foo.bar', array(array()));</code></p>
+$result = $client-call('foo.bar', array(array()));
+</code></pre></p>
 </blockquote>
 <h3>Zend\XmlRpc\Value Objects as Parameters</h3>
 <p>Parameters may also be created as <code>Zend\XmlRpc\Value</code> instances to specify an
