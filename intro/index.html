@@ -243,7 +243,7 @@ complex data structures to be transmitted, processed and returned."</p>
 providing XML-RPC servers.</p>
 <h2 id="quick-start">Quick Start</h2>
 <p>The following demonstrates the most basic use case for <code>Zend\XmlRpc\Server</code>:</p>
-<p> <pre class=codehilite><code class=language-php>class Greeter
+<pre class=codehilite><code class=language-php>class Greeter
 {
     /**
     * Say hello to someone.
@@ -261,7 +261,7 @@ $server = new Zend\XmlRpc\Server;
 
 // Our Greeter class will be called &quot;greeter&quot; from the client:
 $server-&gt;setClass('Greeter', 'greeter');
-$server-&gt;handle();</code></pre></p>
+$server-&gt;handle();</code></pre>
 <blockquote>
 <h3>Docblock annotations are required</h3>
 <p>Function and method docblocks containing parameter and return value
@@ -271,13 +271,13 @@ signatures to clients.</p>
 <p>Docblock descriptions will also be used to provide method help text.</p>
 </blockquote>
 <p>The following demonstrates an XML-RPC client that can consume the above service:</p>
-<p> <pre class=codehilite><code class=language-php>$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
+<pre class=codehilite><code class=language-php>$client = new Zend\XmlRpc\Client('http://example.com/xmlrpcserver.php');
 
 echo $client-&gt;call('greeter.sayHello');
 // will output &quot;Hello Stranger!&quot;
 
 echo $client-&gt;call('greeter.sayHello', ['Dude']);
-// will output &quot;Hello Dude!&quot;</code></pre></p>
+// will output &quot;Hello Dude!&quot;</code></pre>
 
 
 
