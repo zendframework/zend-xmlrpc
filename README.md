@@ -2,7 +2,7 @@
 
 > ## Repository abandoned 2019-12-31
 >
-> This repository has moved to laminas/laminas-xmlrpc.
+> This repository has moved to [laminas/laminas-xmlrpc](https://github.com/laminas/laminas-xmlrpc).
 
 [![Build Status](https://secure.travis-ci.org/zendframework/zend-xmlrpc.svg?branch=master)](https://secure.travis-ci.org/zendframework/zend-xmlrpc)
 [![Coverage Status](https://coveralls.io/repos/github/zendframework/zend-xmlrpc/badge.svg?branch=master)](https://coveralls.io/github/zendframework/zend-xmlrpc?branch=master)
